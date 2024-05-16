@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // Database connection parameters
 $servername = "localhost";
 $username = "root";
@@ -26,4 +26,4 @@ if ($conn->query($sql) === TRUE) {
 
 // Close the database connection
 $conn->close();
-?>
+?> -->

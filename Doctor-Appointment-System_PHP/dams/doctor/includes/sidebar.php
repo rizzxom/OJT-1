@@ -74,12 +74,23 @@ $fname=$row->FullName;
        
         </li>
 
-        <li>
-          <a href="signup.php">
-          <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
-            <span class="menu-text">Add doctor</span>
-          </a>
-        </li>
+        <?php
+// Assuming you have a session variable named $_SESSION['damsid'] containing the ID of the logged-in doctor
+$loggedInDoctorId = $_SESSION['damsid'];
+
+// Check if the currently logged-in doctor is the head doctor (ID = 5)
+$isHeadDoctor = ($loggedInDoctorId == 5);
+
+// HTML code for the "Add Doctor" option
+if ($isHeadDoctor) {
+    echo '<li>
+              <a href="signup.php">
+                <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
+                <span class="menu-text">Add Doctor</span>
+              </a>
+          </li>';
+}
+?>
 
        <li class="has-submenu">
           <a href="javascript:void(0)" class="submenu-toggle">

@@ -15,6 +15,7 @@ if(isset($_POST['submit'])) {
     $aptnumber = mt_rand(100000000, 999999999);
     $cdate = date('Y-m-d');
 
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo '<script>alert("Invalid email format. Email must end with @gmail.com or @yahoo.com")</script>';
     } else if (!preg_match('/^[0-9]{10}$/', $mobnum)) { // Mobile number validation
@@ -61,6 +62,7 @@ if(isset($_POST['submit'])) {
             } else {
                 echo '<script>alert("Something went wrong. Please try again.")</script>';
             }
+
         }
     }
 }

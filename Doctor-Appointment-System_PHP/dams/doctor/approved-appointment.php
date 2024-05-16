@@ -66,7 +66,7 @@ if (strlen($_SESSION['damsid']==0)) {
 										<th>Mobile Number</th>
 										<th>Email</th>
 										<th>Doctor</th>
-									<th>Status</th>
+									    <th>Status</th>
 										<th>Action</th>
 										<th>State</th>
 										
